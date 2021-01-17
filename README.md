@@ -3,5 +3,5 @@ My Family Tree
 
 
 ---
-Using Kingraph
-https://github.com/AlexanderWillner/kingraph
+Using [Kingraph](https://github.com/AlexanderWillner/kingraph "Kingragph-Javascript")
+
