@@ -1,0 +1,108 @@
+families:
+  - house: Kollannur
+    parents: [Antony, Theresa]
+    children: [Mary,Raphael,Jose,Thankamma,Francis]
+    families: 
+      parents: [Raphael, Elsy]
+      children: [Lily, Tony, Poly, Luxy]
+      families:
+         - parents: [Tony, Rency]
+           children: [Elsa Martina, Elvis]
+         - parents: [Poly, Dymi]
+           children: [Deby, Afreen]
+            
+  - house: Perumatil
+    parents: [Raffy, Lily]
+    children: [Filly,Allwin]
+    families:
+    - parents: [Filly,Manoj]
+      children: [Alan,Alex]
+    - parents: [Allwin,Sherin]
+      children: [Chris,Noah]
+    
+  - house: Neelankavil
+    children: [Baby John, Lysa, Vincy N, George N,Pristina]
+    families:
+      - parents: [Baby John, Luxy]
+        children: [Ajay, Akshay]
+
+  - house: Pallatty
+    parents: [John,Leela]
+    children: [Leo, Liji, Lino]
+    families:
+      - parents: [Lino, Elsa Martina]
+
+  - house: Chiriyankandath
+    children: [Baby C, Soloman, Dymi, Sebastian]
+
+  - house: Vadukoot
+    parents: [Lonappen,Annamma]
+    children: [Jose VL, Thresia VL, Kochumary, Raphel, Rita, Francis VL, Rosy]
+    families:
+      - parents: [Raphel, Jessy]
+        children: [Vincy, Rency, Jossy, Fancy]
+
+  - house: Parpukaran
+    parents: [Porinchu, Thandu]
+    children: [Davis, Chacko, Jessy, Ruby]
+    families:
+      - parents: [Davis, Baby]
+        children: [Daby, Daison, Deena]
+      - parents: [Chacko, Alice]
+        children: [Lincy,Linson,Linda]
+      - parents: [Johnson, Ruby]
+        children: [Gleemol, Gleena, Glinda]
+  
+  - house: Komban
+    parents: [Sebastin,Ittianam]
+    children: [Joseph,Paul,Johnson S,Antony (Babu), Biju, Omana,Agnes,Jessy S]
+    families:
+      - parents: [Biju,Fancy]
+        children: [Catherine,Irene]
+      - parents: [Joseph,Gracy]
+        children: [Sean Paul Joseph,Sheen Paul Joseph ]
+      - parents: [Paul,Molly]
+        children: [Sharon]
+      - parents: [Chackochan,Agnes]
+        children: [Febi,Smitha]
+      - parents: [Joy KK,Omana]
+        children: [Geo, Neo, Delmi]
+      - parents: [Francis Pulikkan, Jessy S]
+        children: [Ashwin,Ashlin]
+      - parents: [Johnson S, Tessy]
+        children: [Nidhun,Neena]
+      - parents: [Antony (Babu),Shiny]
+        children: [Vega,Swega]
+
+
+  - house: Thaiparambil
+    parents: [George, Thresia]
+    children: [Charles,Babu, Rajan, Vincent]
+    families:
+      parents: [Vincent,Vincy]
+      children: [Theresa Christina, Jessia Merin]
+
+  - house: Valiyaparambu
+    parents: [Joy, Valsa]
+    children: [Jovin,Jesmi]
+    families: 
+      - parents: [Jovin,Theresa Christina]
+        children: [Sara Maria, Sam]
+      - parents: [Jovils, Jesmi]
+
+people:
+  Raphel:
+    fullname: Raphel Vadukoot
+    class: [major]
+    name: Raphael
+
+
+styles:
+  minor:
+    style: "filled"
+    fillcolor: "#f4f4f4"
+    penwidth: 0
+  unaffiliated:
+    style: "filled"
+    fillcolor: "#f4f4e0"
+    penwidth: 0
