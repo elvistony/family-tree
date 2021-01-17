@@ -1,30 +1,60 @@
 families:
   - house: Kollannur
-    parents: [Antony, Theresa]
-    children: [Mary,Raphael,Jose,Thankamma,Francis]
+    parents: [Antony, Thressia Pallikunnath]
+    children: [Mary,Raphael,Jose K,Thankamma,Francis]
     families: 
-      parents: [Raphael, Elsy]
-      children: [Lily, Tony, Poly, Luxy]
-      families:
+      - parents: [Lonapan M,Mary]
+        children: [Rosily M,Gracy M, Kochenthu M, Varghese M , Baby M, Elsy M, Lisy M,Joby M, Tessy M, Joju M]
+      - parents: [Jose M,Thankamma]
+        children: [Joolie,Benzin, Smitha M ]
+      - families:
+        - parents: [Raphael (M),Joolie]
+        - parents: [Paulson (M), Smitha M]
+        - parents: [Benzin (M), Mrs.Benzin]
+      - parents: [Jose K, Annie P]
+        children: [Robin K, Roy K, Roxan K, Rekha K]
+      - parents: [Francis, Rosy T]
+      - parents: [Raphael, Elsy]
+        children: [Lily, Tony, Poly, Luxy]
+      - families:
          - parents: [Tony, Rency]
            children: [Elsa Martina, Elvis]
          - parents: [Poly, Dymi]
            children: [Deby, Afreen]
-            
-  - house: Perumatil
-    parents: [Raffy, Lily]
-    children: [Filly,Allwin]
+  - house: Mangalan
     families:
+    - parents: [Kunjippallu M, Mary (1)]  
+      children: [Augustine MK, Elsy, Anthony MK, Rosy MK] 
+    - parents: [Kunjippallu M, Mary C]
+      children: [Ammini MK, George MK, John MK, Sisily MK, Baby MK ] 
+
+  - house: Perumattil
+    parents: [Kunjuvareed,Mariam]
+    children: [Jose PK,Johnny PK, Mary PK, Sicily PK, Rosily PK, Maggie PK, Raffy]
+    families: 
+    - parents: [Jose PK, Kochu Thresia]
+    - parents: [Johnny PK, Elsy Johnny]
+    - parents: [Jose AP, Mary PK]
+    - parents: [Senslavous, Sicily PK]
+    - parents: [Paul C, Rosily PK]
+    - parents: [Lazar K, Maggie PK]
+    - parents: [Raffy, Lily]
+      children: [Filly,Allwin]
     - parents: [Filly,Manoj]
       children: [Alan,Alex]
     - parents: [Allwin,Sherin]
       children: [Chris,Noah]
     
-  - house: Neelankavil
-    children: [Baby John, Lysa, Vincy N, George N,Pristina]
+  - house: Neelamkavil
+    parents: [Paul N, Veronica Paul ]
+    children: [Babyjohn, Laisa, Vincy Thomas, George N,Prestina, Annie N]
     families:
-      - parents: [Baby John, Luxy]
-        children: [Ajay, Akshay]
+      - parents: [George N, Denny]
+      - parents: [Laisa, Jose T]
+      - parents: [Thomas Vazhapilly, Vincy Thomas]
+      - parents: [Lazar Kannanaikal,Prestina]
+      - parents: [Babyjohn, Luxy]
+        children: [Ajai, Akshay]
 
   - house: Pallatty
     parents: [John,Leela]
@@ -64,7 +94,7 @@ families:
       - parents: [Paul,Molly]
         children: [Sharon]
       - parents: [Chackochan,Agnes]
-        children: [Febi,Smitha]
+        children: [Febi, Smitha]
       - parents: [Joy KK,Omana]
         children: [Geo, Neo, Delmi]
       - parents: [Francis Pulikkan, Jessy S]
