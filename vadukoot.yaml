@@ -1,0 +1,57 @@
+families:
+  - house: Parpukaran
+    parents: [Porinchu, Thandu]
+    children: [Davis, Chacko, Jessy, Ruby]
+    families:
+      - parents: [Davis, Baby]
+        children: [Daby, Daison, Deena]
+        families:
+          - parents: [Daby,Joy]
+            children: [Joble,Jibin]
+          - parents: [Daison,Ishara]
+            children: [Divine,Vivan,Grace]
+          - parents: [Deena,Danny]
+            children: [Blessy, Annie Rose,Joyce] 
+          - parents: [Chacko, Alice]
+            children: [Lincy,Linson,Linda]
+            families:
+              - parents: [Lincy,Benny]
+                children: [Aleena, Amal]
+              - parents: [Linson, Deepthi]
+              - parents: [Linda,Anto]
+                children: [Neharose, Henarose] 
+      - parents: [Raphel, Jessy]
+        children: [Vincy, Rency, Jossy, Fancy]
+        families:
+          - parents: [Vincy, Vincent De Paul]
+            children: [Theresa Christina, Jessia Merin]
+          - parents: [Rency, Tony K.R]
+            children: [Elsa Martina,Elvis]
+            families:
+              - parents: [Elsa Martina, Lino John]
+          - parents: [Jossy,Jilly]
+            children: [Jeslin, Jain, Jerin, Justin]
+          - parents: [Fancy, Biju]
+            children: [Catherine, Irene]
+            families:
+              - parents: [Catherine, Tyson]  
+      - parents: [Johnson, Ruby]
+        children: [Gleemol, Gleena, Glinda]
+        families:
+          - parents: [Gleemol,Rajan]
+            children: [Rejoy]
+          - parents: [Gleena, Anto]
+            children: [Angelo]
+          - parents: [Glinda,Jose]
+            children: [Joel, Jerome]
+
+
+styles:
+  minor:
+    style: "filled"
+    fillcolor: "#f4f4f4"
+    penwidth: 0
+  unaffiliated:
+    style: "filled"
+    fillcolor: "#f4f4e0"
+    penwidth: 0
