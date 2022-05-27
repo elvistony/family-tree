@@ -18,7 +18,7 @@ families:
               - parents: [Lincy,Benny]
                 children: [Aleena, Amal]
               - parents: [Linson, Deepthi]
-              - parents: [Linda,Anto]
+              - parents: [Linda,Anto .]
                 children: [Neharose, Henarose] 
       - parents: [Raphel, Jessy]
         children: [Vincy, Rency, Jossy, Fancy]
