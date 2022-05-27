@@ -21,6 +21,7 @@ families:
            children: [Elsa Martina, Elvis]
          - parents: [Poly, Dymi]
            children: [Deby, Afreen]
+
   - house: Mangalan
     families:
     - parents: [Kunjippallu M, Mary (1)]  
@@ -60,7 +61,9 @@ families:
     parents: [John,Leela]
     children: [Leo, Liji, Lino]
     families:
-      - parents: [Lino, Elsa Martina]
+      - parents: [Lino John, Elsa Martina]
+      - parents: [Leo John, Sonia]
+        children: [Sean,Son,Zara]
 
   - house: Chiriyankandath
     children: [Baby C, Soloman, Dymi, Sebastian]
@@ -88,7 +91,7 @@ families:
     children: [Joseph,Paul,Johnson S,Antony (Babu), Biju, Omana,Agnes,Jessy S]
     families:
       - parents: [Biju,Fancy]
-        children: [Catherine,Irene]
+        children: [Catherine Biju,Irene K Biju]
       - parents: [Joseph,Gracy]
         children: [Sean Paul Joseph,Sheen Paul Joseph ]
       - parents: [Paul,Molly]
@@ -104,12 +107,14 @@ families:
       - parents: [Antony (Babu),Shiny]
         children: [Vega,Swega]
 
+  - house: Kannookadan
+    parents: [Tyson,Catherine Biju]
 
   - house: Thaiparambil
-    parents: [George, Thresia]
-    children: [Charles,Babu, Rajan, Vincent]
+    parents: [George, Thandamma]
+    children: [Charles,Antonio, Francis, Vincent De Paul]
     families:
-      parents: [Vincent,Vincy]
+      parents: [Vincent De Paul,Vincy]
       children: [Theresa Christina, Jessia Merin]
 
   - house: Valiyaparambu
