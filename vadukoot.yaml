@@ -4,99 +4,52 @@ families:
     parents: [Porinchu, Thandu]
     children: [Davis, Chacko, Jessy, Ruby]
     families:
+    
       - parents: [Davis, Baby]
         children: [Daby, Daison, Deena]
          - families:
-           parents: [Daison,Ishara]
-           children: [Divine,Vivan,Grace]
            parents: [Daby,Joy]
            children: [Joble,Jibin]
+           parents: [Daison,Ishara]
+           children: [Divine,Vivan,Grace]
            parents: [Deena,Danny]
            children: [Blessy, Rosemol,Joyce]
+           
       - parents: [Chacko, Alice]
         children: [Lincy,Linson,Linda]
         - families:
           parents: [Lincy,Benny]
           children: [Aleena, Amal]
           parents: [Linson, Deepthi]
-          parents: [Linda,]
-          children: []
+          parents: [Linda,Anto]
+          children: [Neharose, Henarose]
+          
+      - parents: [Raphel, Jessy]
+        children: [Vincy, Rency, Jossy, Fancy]
+        - families:
+          - parents: [Vincy, Vincent De Paul]
+            children: [Theresa Christina, Jessia Merin]
+          - parents: [Rency, Tony K.R]
+            children: [Elsa Martina,Elvis]
+            - families:
+              parents: [Elsa Martina, Lino John
+          - parents: [Jossy,Jilly]
+            children: [Jeslin, Jain, Jerin, Justin]
+          - parents: [Fancy, Biju]
+            children: [Catherine, Irene]
+            - families:
+              parents: [Catherine, Tyson]
+             
       - parents: [Johnson, Ruby]
         children: [Gleemol, Gleena, Glinda]
         - families:
-          parents: [Gleemol,]
-          children: []
-          parents: [Gleena,]
-          children: []
-          parents: [Glinda,]
-          children: []
+          parents: [Gleemol,Rajan]
+          children: [Rejoy]
+          parents: [Gleena, Anto]
+          children: [Angelo]
+          parents: [Glinda,Jose]
+          children: [Joel, Jerome]
   
-  - house: Kannookadan
-    parents: [Tyson,Catherine Biju]
-
-  - house: Komban
-    parents: [Sebastin,Ittianam]
-    children: [Joseph,Paul,Johnson S,Antony (Babu), Biju, Omana,Agnes,Jessy S]
-    families:
-      - parents: [Biju,Fancy]
-        children: [Catherine Biju,Irene K Biju]
-      - parents: [Joseph,Gracy]
-        children: [Sean Paul Joseph,Sheen Paul Joseph]
-      - parents: [Paul,Molly]
-        children: [Sharon]
-      - parents: [Chackochan,Agnes]
-        children: [Febi, Smitha]
-      - parents: [Joy KK,Omana]
-        children: [Geo, Neo, Delmi]
-      - parents: [Francis Pulikkan, Jessy S]
-        children: [Ashwin,Ashlin]
-      - parents: [Johnson S, Tessy]
-        children: [Nidhun,Neena]
-      - parents: [Antony (Babu),Shiny]
-        children: [Vega,Swega]
-
-  - house: Thaiparambil
-    parents: [George, Thandamma]
-    children: [Charles,Antonio, Francis, Vincent De Paul]
-    families:
-      parents: [Vincent De Paul,Vincy]
-      children: [Theresa Christina, Jessia Merin]
-
-  - house: Valiyaparambu
-    parents: [Joy, Valsa]
-    children: [Jovin,Jesmi]
-    families: 
-      - parents: [Jovin,Theresa Christina]
-        children: [Sara Maria, Sam]
-      - parents: [Jovils, Jesmi]
-
-  - house: Kollannur
-    parents: [Raphael, Elsy]
-    children: [Lily, Tony, Poly, Luxy]
-    families:
-     - parents: [Tony, Rency]
-       children: [Elsa Martina, Elvis]
-     - parents: [Poly, Dymi]
-       children: [Deby, Afreen]
-     - families:
-        - parents: [Deby, Roshan]
-
-  - house: Vadukoot
-    parents: [Lonappen,Annamma]
-    children: [Jose VL, Thresia VL, Kochumary, Raphel, Rita, Francis VL, Rosy]
-    families:
-      - parents: [Raphel, Jessy]
-        children: [Vincy, Rency, Jossy, Fancy]
-      - families:
-        - parents: [Jossy,Jilly]
-          children: [Jeslin V, Jain, Jerin, Justin]
-
-people:
-  Raphel:
-    fullname: Raphel Vadukoot
-    class: [major]
-    name: Raphael
-
 styles:
   minor:
     style: "filled"
