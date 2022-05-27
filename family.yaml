@@ -6,10 +6,30 @@ families:
     families:
       - parents: [Davis, Baby]
         children: [Daby, Daison, Deena]
+         - families:
+           parents: [Daison,Ishara]
+           children: [Divine,Vivan,Grace]
+           parents: [Daby,Joy]
+           children: [Joble,Jibin]
+           parents: [Deena,Danny]
+           children: [Blessy, Rosemol,Joyce]
       - parents: [Chacko, Alice]
         children: [Lincy,Linson,Linda]
+        - families:
+          parents: [Lincy,Benny]
+          children: [Aleena, Amal]
+          parents: [Linson, Deepthi]
+          parents: [Linda,]
+          children: []
       - parents: [Johnson, Ruby]
         children: [Gleemol, Gleena, Glinda]
+        - families:
+          parents: [Gleemol,]
+          children: []
+          parents: [Gleena,]
+          children: []
+          parents: [Glinda,]
+          children: []
   
   - house: Kannookadan
     parents: [Tyson,Catherine Biju]
@@ -21,7 +41,7 @@ families:
       - parents: [Biju,Fancy]
         children: [Catherine Biju,Irene K Biju]
       - parents: [Joseph,Gracy]
-        children: [Sean Paul Joseph,Sheen Paul Joseph ]
+        children: [Sean Paul Joseph,Sheen Paul Joseph]
       - parents: [Paul,Molly]
         children: [Sharon]
       - parents: [Chackochan,Agnes]
@@ -51,18 +71,15 @@ families:
       - parents: [Jovils, Jesmi]
 
   - house: Kollannur
-    parents: [Antony, Thressia Pallikunnath]
-    children: [Mary,Raphael,Jose K,Thankamma,Francis]
-    families: 
-      - parents: [Raphael, Elsy]
-        children: [Lily, Tony, Poly, Luxy]
-      - families:
-         - parents: [Tony, Rency]
-           children: [Elsa Martina, Elvis]
-         - parents: [Poly, Dymi]
-           children: [Deby, Afreen]
-         - families:
-            - parents: [Deby, Roshan]
+    parents: [Raphael, Elsy]
+    children: [Lily, Tony, Poly, Luxy]
+    families:
+     - parents: [Tony, Rency]
+       children: [Elsa Martina, Elvis]
+     - parents: [Poly, Dymi]
+       children: [Deby, Afreen]
+     - families:
+        - parents: [Deby, Roshan]
 
   - house: Vadukoot
     parents: [Lonappen,Annamma]
