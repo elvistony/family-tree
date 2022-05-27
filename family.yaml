@@ -63,7 +63,7 @@ families:
     families:
       - parents: [Lino John, Elsa Martina]
       - parents: [Leo John, Sonia]
-        children: [Sean,Son,Zara]
+        children: [Sean,Neil,Zara]
 
   - house: Chiriyankandath
     children: [Baby C, Soloman, Dymi, Sebastian]
