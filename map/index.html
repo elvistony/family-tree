@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Kollannur Family Tree | Lineage Map</title>
+
+  <meta name="theme-color" content="#2196F3" />
+  <meta http-equiv="Cache-control" content="public">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A lineage mapping of the Kollannur Family">
+  <link rel="stylesheet" href="../assets/css/w3.css">
+  <link rel="stylesheet" href="../assets/css/font.css">
+  <link rel="stylesheet" href="../assets/css/custom.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+
+</head>
+
+<body>
+
+  <!-- Sidebar/menu -->
+  <nav class="w3-sidebar w3-blue w3-collapse w3-top w3-large w3-padding"
+    style="z-index: 3; width: 300px; font-weight: bold; display: none;" id="mySidebar"><br>
+    <!-- <a href="javascript:void(0)" onclick="sidebar_close()" class="w3-button w3-hide-large w3-display-topleft"
+      style="width:100%;font-size:22px"></a> -->
+    <div class="w3-container">
+      <h3 class="w3-padding"><b>Kollannur <sup>FT</sup></h3>
+    </div>
+    <div class="w3-padding-32 w3-center">
+      <div class="w3-bar w3-border">
+        <a href="../" class="w3-bar-item w3-button"><i class="fa fa-home"></i></a>
+        <a href="#" onclick="openFullscreen()" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-arrows-alt"></i></a>
+        <a href="#" onclick="sidebar_close()" class="w3-bar-item w3-button "><i class="fa fa-arrow-left"></i></a>
+      </div>
+    </div>
+    <div class="w3-container w3-white" style="height:60%;overflow:auto;">
+      <!-- <img src="https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png?w=640" class="w3-image w3-responsive" alt="">
+      <p>Name: <input type="text" class="w3-input"></p>
+      <p>Name: <input type="text" class="w3-input"></p>
+      <p>Name: <input type="text" class="w3-input"></p>
+      <p>Name: <input type="text" class="w3-input"></p> -->
+      <table style="height:100%;width:100%; text-align: center;color: grey;font-size: small;"> 
+        <tr><td>Select a node to view its information</td></tr>
+      </table>
+    </div>
+  </nav>
+
+  <!-- Top menu on small screens -->
+  <header class="w3-container w3-top w3-hide-large w3-blue w3-xlarge w3-padding">
+    <a href="javascript:void(0)" class="w3-button w3-blue w3-margin-right" onclick="sidebar_open()">☰</a>
+    <span>Kollannur <sup> Family Tree</sup></span>
+  </header>
+
+  <!-- Overlay effect when opening sidebar on small screens -->
+  <div class="w3-overlay w3-hide-large" onclick="sidebar_close()" style="cursor: pointer; display: none;"
+    title="close side menu" id="myOverlay"></div>
+
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-main body-container">
+    <div style="height: 100%;">
+      <div id="loader" style="height: 100%;">
+        <table style="height:100%;width:100%; text-align: center;color: grey;"> 
+          <tr><td id="loader-text">Loading Lineage Map...</td></tr>
+        </table>
+      </div>
+      <div id="body-content" style="height: 100%;">
+        <div id="myfamily" style="height: 100%;"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/sidebar.js"></script>
+  <script src="../assets/js/utils.js"></script>
+  <script src="../assets/js/init_map.js"></script>
+  <script src="../assets/js/dataloader.js"></script>
+
+</body>
+
+</html>

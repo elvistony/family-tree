@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Kollannur Family Tree | Discover your relations</title>
+
+  <meta name="theme-color" content="#2196F3" />
+  <meta http-equiv="Cache-control" content="public">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A lineage mapping of the Kollannur Family">
+  <link rel="stylesheet" href="../assets/css/w3.css">
+  <link rel="stylesheet" href="../assets/css/font.css">
+  <link rel="stylesheet" href="../assets/css/custom.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+  <!-- Sidebar/menu -->
+  <nav class="w3-sidebar w3-blue w3-collapse w3-top w3-large w3-padding"
+    style="z-index: 3; width: 300px; font-weight: bold; display: none;" id="mySidebar"><br>
+    <!-- <a href="javascript:void(0)" onclick="sidebar_close()" class="w3-button w3-hide-large w3-display-topleft"
+      style="width:100%;font-size:22px"></a> -->
+    <div class="w3-container">
+      <h3 class="w3-padding"><b>Kollannur </br> <sup>Family Tree</sup></h3>
+    </div>
+    <div class="w3-bar-block">
+      <a href="../" onclick="sidebar_close()" class="w3-bar-item w3-button w3-hover-white">Home</a>
+      <a href="../map/" onclick="sidebar_close()" class="w3-bar-item w3-button w3-hover-white">Web App</a>
+      <a href="../discover/" onclick="sidebar_close()" class="w3-bar-item w3-light-gray w3-button w3-hover-white">Discover Relations</a>
+      <a href="#" onclick="sidebar_close()" class="w3-bar-item w3-button w3-hover-white">About</a>
+    </div>
+  </nav>
+
+  <!-- Top menu on small screens -->
+  <header class="w3-container w3-top w3-hide-large w3-blue w3-xlarge w3-padding">
+    <a href="javascript:void(0)" class="w3-button w3-blue w3-margin-right" onclick="sidebar_open()">☰</a>
+    <span>Kollannur <sup> Family Tree</sup></span>
+  </header>
+
+  <!-- Overlay effect when opening sidebar on small screens -->
+  <div class="w3-overlay w3-hide-large" onclick="sidebar_close()" style="cursor: pointer; display: none;"
+    title="close side menu" id="myOverlay"></div>
+
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-main body-container"s>
+    <div style="height: 100%;padding: 20px;">
+      <div id="loader" style="height: 100%;">
+        <table style="height:100%;width:100%; text-align: center;color: grey;"> 
+          <tr><td id="loader-text">Loading Relations to memory...</td></tr>
+        </table>
+      </div>
+      <div id="body-content" style="display: none">
+        <div class="w3-container w3-indigo">
+          <h2><i class="fa fa-search w3-margin-right"></i>Discover</h2>
+        </div>
+        <div class="w3-container w3-white w3-padding-16">
+            <div class="w3-row-padding" style="margin:0 -16px;">
+              <div class="w3-half w3-margin-bottom">
+                <label><i class="fa fa-user"></i> Relative A</label>
+                <i onclick="release('A')" class="w3-button w3-small w3-right w3-hover-white w3-text-black fa fa-close"> </i>
+                <input class="w3-input w3-border" id="relative_A" type="text" placeholder="Relative A Name" name="CheckIn" required>
+                <input id="relative_A_ID" type="text" hidden>
+              </div>
+              <div class="w3-half">
+                <label><i class="fa fa-user"></i> Relative B</label>
+                <i onclick="release('B')" class="w3-button w3-small w3-right w3-hover-white w3-text-black fa fa-close"> </i>
+                <input class="w3-input w3-border" id="relative_B" type="text"  placeholder="Relative B Name" name="CheckOut" required>
+                <input id="relative_B_ID" type="text" hidden>
+              </div>
+            </div>
+            <button class="w3-button w3-indigo w3-margin-top w3-hover-blue w3-block" onclick="discover()"><i class="fa fa-search w3-margin-right"></i> Discover </button>
+        </div>
+
+        <div id="discover-results">
+          <ul class="w3-ul" id="discover-list">
+            
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/sidebar.js"></script>
+  <script src="../assets/js/utils.js"></script>
+  <script src="../assets/js/autocomplete.js"></script>
+  <script src="../assets/js/init_discover.js"></script>
+  <script src="../assets/js/dataloader.js"></script>
+  <script src="../assets/js/discover.js"></script>
+</body>
+
+</html>
