@@ -182,5 +182,5 @@ function render_map(){
 }
 
 function prepare_field(prop,value){
-  return `<p>${prop}: <input type="text" class="w3-input" value="${value}"></p>`
+  return `<p>${prop}: <input type="text" class="w3-input" readonly value="${value}"></p>`
 }
