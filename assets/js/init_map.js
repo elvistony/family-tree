@@ -20,7 +20,7 @@ function prepare_structures(){
 
         // Spouse to LOVE Node
         if(Object.keys(person).includes("Spouse")){
-            if(!Object.keys(love_map).includes(person.ID)){
+            if(!(Object.keys(love_map).includes(person.ID))){
                 relations.push({
                     from: person.ID,
                     to: person.Spouse+"_LOVE",
@@ -95,7 +95,7 @@ function render_map(){
           // stabilization: true,
           enabled: true,
         stabilization: {
-          iterations: 800,
+          iterations: 500,
 
         },
         },
