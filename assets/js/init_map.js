@@ -94,17 +94,19 @@ function render_map(){
         physics: {
           // stabilization: true,
           enabled: true,
-        stabilization: {
-          iterations: 500,
+          stabilization: {
+            iterations: 800,
 
-        },
+          },
         },
       };
 
-      var cookie = getCookie("CalculatedNodes")
-      if(cookie!=""){        
+      // var cookie = getCookie("CalculatedNodes")
+      var storage = localStorage.getItem("CalculatedNodes")
+      if(storage!=null){        
+        console.log("Found a previous scroll of knowledge!")
         var data = {
-            nodes: JSON.parse(cookie),
+            nodes: JSON.parse(storage),
             edges: edges,
         };
       }else{
@@ -145,7 +147,7 @@ function render_map(){
                   prepare_field("Spouse", people_data[person[key]]["Name"]);
                 break;
               case "Name":
-                details_pane.innerHTML +=  prepare_field("Name:", person[key]);
+                details_pane.innerHTML +=  prepare_field("Name", person[key]);
                 break;
               case "DOB":
                 details_pane.innerHTML =
@@ -165,7 +167,8 @@ function render_map(){
           }
           // document.body.classList.remove('sb-sidenav-toggled');
         } else if (params.edges.length == 0 && params.nodes.length == 0) {
-          document.getElementById("side-details").innerHTML = `<table style="height:100%;width:100%; text-align: center;color: grey;font-size: small;"> 
+          document.getElementById("side-details").innerHTML = `
+          <table style="height:100%;width:100%; text-align: center;color: grey;font-size: small;"> 
           <tr><td>Select a node to view its information</td></tr>
         </table>`;
           // document.body.classList.add('sb-sidenav-toggled');
@@ -174,13 +177,17 @@ function render_map(){
 
       network.once('stabilizationIterationsDone',function(){
         leave_loader()
-        network.storePositions()
-        setCookie("CalculatedNodes",data.nodes.get(),5)
+        if(localStorage.getItem('CalculatedNodes')==null){
+          network.storePositions()
+          console.log(data.nodes.get())
+          localStorage.setItem("CalculatedNodes",JSON.stringify(data.nodes.get()))
+        }
+        // setCookie("CalculatedNodes",JSON.stringify(data.nodes.get()),5)
       })
 
-      loader_update("Stabilizing Nodes...<br>This might take a while!")
+      loader_update(`Stabilizing Nodes...<br><span class="w3-small"> This is a one time process and will be cached to your device!</span>`)
 }
 
 function prepare_field(prop,value){
-  return `<p>${prop}: <input type="text" class="w3-input" readonly value="${value}"></p>`
+  return `<p><p class="w3-small">${prop}:</p> <input type="text" class="w3-input" readonly value="${value}"></p>`
 }

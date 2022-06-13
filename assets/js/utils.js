@@ -10,6 +10,7 @@ function openFullscreen() {
 }
 
 function leave_loader(){
+    
     document.getElementById('loader').outerHTML="";
     document.getElementById('body-content').style.display="block"
 }
@@ -26,6 +27,8 @@ function setCookie(cname, cvalue, exdays) {
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
   }
 
+
+  
   function getCookie(cname) {
     let name = cname + "=";
     let decodedCookie = decodeURIComponent(document.cookie);
