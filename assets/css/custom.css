@@ -56,3 +56,29 @@ body {
 .hide{
   display: none;
 }
+
+.side-info-item{
+  margin-bottom: 0px;
+}
+
+.w3-blurred{
+  transition: 0.5s ease;
+}
+
+.w3-blurred:hover{
+  transition: 0.5s ease;
+  filter: blur(3px);
+}
+
+.blurred-overlay{
+  transition: 0.5s ease;
+  opacity: 0;
+}
+
+.w3-blurred:hover, .blurred-overlay{
+  opacity: 100%;
+}
+
+.blurred-overlay:hover{
+  opacity: 100%;
+}

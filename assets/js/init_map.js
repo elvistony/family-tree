@@ -45,6 +45,7 @@ function prepare_structures(){
                     label: "❤️",
                     group: person.House,
                     shape: "circle",
+                    size: 4,
                     // image: "https://img.icons8.com/officexs/344/filled-like.png",
                     sortkey: 0,
                   });
@@ -104,12 +105,14 @@ function render_map(){
       // var cookie = getCookie("CalculatedNodes")
       var storage = localStorage.getItem("CalculatedNodes")
       if(storage!=null){        
+        loader_update(`Loading Cached Nodes...<br><span class="w3-small"> This will be quick!</span>`)
         console.log("Found a previous scroll of knowledge!")
         var data = {
             nodes: JSON.parse(storage),
             edges: edges,
         };
       }else{
+        loader_update(`Stabilizing Nodes...<br><span class="w3-small"> This is a one time process and will be cached to your device!</span>`)
         console.log("No stored positions, would have to get the job done normally!")
         var data = {
             nodes: nodes,
@@ -134,7 +137,7 @@ function render_map(){
               case "ID":
                 break;
               case "Image":
-                details_pane += `<img src="${person[key]}" class="w3-image w3-responsive" alt="">`
+                details_pane.innerHTML = `<p><img src="${person[key]}" class="w3-image w3-responsive" alt=""></p>` + details_pane.innerHTML 
                 break;
               case "Parent":
                 details_pane.innerHTML =
@@ -185,9 +188,13 @@ function render_map(){
         // setCookie("CalculatedNodes",JSON.stringify(data.nodes.get()),5)
       })
 
-      loader_update(`Stabilizing Nodes...<br><span class="w3-small"> This is a one time process and will be cached to your device!</span>`)
+      
 }
 
 function prepare_field(prop,value){
-  return `<p><p class="w3-small">${prop}:</p> <input type="text" class="w3-input" readonly value="${value}"></p>`
+  console.log(prop,value)
+  if(value==NaN || value=="NaN"){
+    return ""
+  }
+  return `<p class="side-info-item"><span class="w3-small">${prop}:</br></span> <input type="text" class="w3-input" readonly value="${value}"></p>`
 }

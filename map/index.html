@@ -32,6 +32,7 @@
         <a href="../" class="w3-bar-item w3-button"><i class="fa fa-home"></i></a>
         <a href="#" onclick="openFullscreen()" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-arrows-alt"></i></a>
         <a href="#" onclick="sidebar_close()" class="w3-bar-item w3-button "><i class="fa fa-arrow-left"></i></a>
+        <a href="#" onclick="reload_map()" class="w3-bar-item w3-button "><i class="fa fa-refresh"></i></a>
       </div>
     </div>
     <div class="w3-container w3-white" style="height:60%;overflow:auto;">
@@ -63,7 +64,7 @@
     <div style="height: 100%;">
       <div id="loader" style="height: 100%;">
         <table style="height:100%;width:100%; text-align: center;color: grey;"> 
-          <tr><td id="loader-text">Loading Lineage Map...</td></tr>
+          <tr><td id="loader-text">Loading Lineage Map...<br><span class="w3-small"> Using your device's computational power!</span></td></tr>
         </table>
       </div>
       <div id="body-content" style="height: 100%;display: none;">
