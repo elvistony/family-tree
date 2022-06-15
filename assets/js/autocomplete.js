@@ -29,14 +29,16 @@ function autocomplete(input_id, arr) {
             max_count-=1;
             /*create a DIV element for each matching element:*/
             b = document.createElement("DIV");
+            b.setAttribute('focusable',true)
+            b.classList.add("w3-list-item")
             try{
               house = arr[i]['House']
             }catch{
               house = ""
             }
             /*make the matching letters bold:*/
-            b.innerHTML = "<strong>" + arr[i]['Name'].substr(0, val.length) + "</strong>";
-            b.innerHTML += arr[i]['Name'].substr(val.length) + "[" + house + "]"
+            b.innerHTML = `<span class="w3-small w3-text-gray w3-right">${house}</span>`+"<strong>" + arr[i]['Name'].substr(0, val.length) + "</strong>";
+            b.innerHTML += arr[i]['Name'].substr(val.length)
             /*insert a input field that will hold the current array item's value:*/
             
             b.innerHTML += "<input type='hidden' value='" + arr[i]['Name'] + " ["+ house + "]' person='"+arr[i]["ID"]+"' >";

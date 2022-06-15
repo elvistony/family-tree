@@ -1,5 +1,5 @@
 function dataload(){
-    loader_update(`Fetching Nodes...<br><span class="w3-small"> Accessing global family directory!</span>`)
+    loader_update(`Fetching Nodes...<br><span class="w3-small"> Accessing the global family directory!</span>`)
     const json_load = new XMLHttpRequest();
     json_load.onload = function() {
         people_data = JSON.parse(this.responseText)

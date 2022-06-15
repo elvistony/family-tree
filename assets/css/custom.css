@@ -82,3 +82,13 @@ body {
 .blurred-overlay:hover{
   opacity: 100%;
 }
+
+.w3-list-item{
+  padding: 5px 10px;
+  transition: 0.25s ease;
+}
+
+.w3-list-item:hover{
+  background: lightgray;
+  transition: 0.25s ease;
+}

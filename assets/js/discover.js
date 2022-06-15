@@ -19,7 +19,7 @@ function discover() {
 
         steps.push({id:from, how:relation})
         all_people[from]["visited"] = true
-        console.log(all_people[from])
+        // console.log(all_people[from])
 
         if(from==to){
             console.log("Found Path!")
@@ -84,89 +84,3 @@ function discover() {
         return template;
     }
 }
-
-// function traverse(from_id, to_id, steps = [], relation = "relative") {
-//   if (all_people[from_id]["visited"]) {
-//     return false;
-//   }
-
-
-
-//   // push "ID" to steps
-//   steps.push({ id: from_id, relation: relation });
-//   all_people[from_id]["visited"] = true;
-//   // try{console.log(all_people[from_id]["Name"])}catch{}
-//   if (from_id == to_id) {
-//     console.log("FOUND!");
-//     // console.log(steps)
-//     print_path(steps);
-//     return steps;
-//   }
-
-//   // Traverse to parent
-//   try {
-//     if (!all_people[from_id]["parent"]["visted"]) {
-//       // console.log("<= PARENT")
-//       traverse(
-//         all_people[from_id]["parent"],
-//         to_id,
-//         steps.slice(),
-//         (relation = "parent")
-//       );
-//     }
-//   } catch {}
-
-//   // Traverse to spouse
-//   try {
-//     if (!all_people[from_id]["spouse"]["visted"]) {
-//       // console.log("== SPOUSE")
-//       traverse(
-//         all_people[from_id]["spouse"],
-//         to_id,
-//         steps.slice(),
-//         (relation = "spouse")
-//       );
-//     }
-//   } catch {}
-
-//   // Traverse to children
-
-//   try {
-//     for (child of all_people[from_id]["children"]) {
-//       if (!all_people[child]["visted"]) {
-//         // console.log("=> CHILD")
-//         traverse(child, to_id, steps.slice(), (relation = "child"));
-//       }
-//     }
-//   } catch {}
-// }
-
-// function print_path(steps) {
-//   console.log(steps);
-//   tags = document.getElementById("result-tags");
-//   // tags.innerHTML = ""
-//   tags.innerHTML += `<span class="tag bg-warning">${
-//     document.getElementById("relation_1").value
-//   }'s</span>`;
-//   steps = steps.slice(0, -1);
-//   c = 0;
-//   suffix = "'s";
-//   for (step of steps) {
-//     console.log(step.relation);
-//     if (c == steps.length) {
-//       suffix = "";
-//     }
-//     switch (step.relation) {
-//       case "relative":
-//         break;
-//       case "spouse":
-//         break;
-//       default:
-//         tags.innerHTML += `<span class="">${step.relation + suffix}</span>`;
-//     }
-//     c += 1;
-//   }
-//   tags.innerHTML += `is <span class="tag bg-warning"> ${
-//     document.getElementById("relation_2").value
-//   }</span>`;
-// }
