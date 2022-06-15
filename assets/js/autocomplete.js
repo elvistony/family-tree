@@ -29,11 +29,17 @@ function autocomplete(input_id, arr) {
             max_count-=1;
             /*create a DIV element for each matching element:*/
             b = document.createElement("DIV");
+            try{
+              house = arr[i]['House']
+            }catch{
+              house = ""
+            }
             /*make the matching letters bold:*/
             b.innerHTML = "<strong>" + arr[i]['Name'].substr(0, val.length) + "</strong>";
-            b.innerHTML += arr[i]['Name'].substr(val.length);
+            b.innerHTML += arr[i]['Name'].substr(val.length) + "[" + house + "]"
             /*insert a input field that will hold the current array item's value:*/
-            b.innerHTML += "<input type='hidden' value='" + arr[i]['Name'] + "' person='"+arr[i]["ID"]+"' >";
+            
+            b.innerHTML += "<input type='hidden' value='" + arr[i]['Name'] + " ["+ house + "]' person='"+arr[i]["ID"]+"' >";
             /*execute a function when someone clicks on the item value (DIV element):*/
             b.addEventListener("click", function(e) {
                 /*insert the value for the autocomplete text field:*/

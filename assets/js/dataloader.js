@@ -11,7 +11,4 @@ function dataload(){
     json_load.open("GET", URL);
     json_load.send();
 }
-
-setTimeout(()=>{
-    dataload()
-},2000)
+dataload()

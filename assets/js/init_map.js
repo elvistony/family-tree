@@ -5,7 +5,6 @@ function callback_after_load(){
 }
 
 function prepare_structures(){
-
     var persons = []
     var relations = []
     var love_map = {}
