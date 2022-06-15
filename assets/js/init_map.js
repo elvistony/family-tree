@@ -37,6 +37,14 @@ function prepare_structures(){
                         color:'red'
                     }
                 })
+
+              // Bring spouses closer together
+              //   relations.push({
+              //     from: person.ID,
+              //     to: person.Spouse,
+              //     width:5,
+              //     hidden:true
+              // })
                 love_map[person.Spouse] = person.Spouse+"_LOVE"
                 love_map[person.ID] = person.Spouse+"_LOVE"
 
@@ -145,9 +153,14 @@ function render_map(){
                   prepare_field("Parent", people_data[person[key]]["Name"]);
                 break;
               case "Spouse":
-                details_pane.innerHTML =
-                  details_pane.innerHTML +
-                  prepare_field("Spouse", people_data[person[key]]["Name"]);
+                details_pane.innerHTML +=prepare_field("Spouse", people_data[person[key]]["Name"]);
+                if("Children" in people_data[person[key]]){
+                  details_pane.innerHTML += `<p class="side-info-item"><span class="w3-small">Children:</br><ul class='w3-ul'>`
+                  for (child of people_data[person[key]]['Children']){
+                    details_pane.innerHTML +=`<li>${people_data[child]['Name']}</li>`
+                  }
+                  details_pane.innerHTML += "</ul></p>"
+                }
                 break;
               case "Name":
                 details_pane.innerHTML +=  prepare_field("Name", person[key]);
@@ -162,6 +175,13 @@ function render_map(){
                 break;
               case "Full Name":
                 details_pane.innerHTML +=prepare_field("Full Name", +person[key]);
+                break;
+              case  "Children":
+                details_pane.innerHTML += `<p class="side-info-item"><span class="w3-small">Children:</br><ul class='w3-ul'>`
+                for (child of person[key]){
+                  details_pane.innerHTML +=`<li>${people_data[child]['Name']}</li>`
+                }
+                details_pane.innerHTML += "</ul></p>"
                 break;
               default:
                 details_pane.innerHTML +=  prepare_field(key, person[key]);
