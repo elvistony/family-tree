@@ -71,16 +71,24 @@ function discover() {
                     list_container.innerHTML+=render_list_item(step.id,step.how)
             }
         }
+        console.log(steps)
     }
 
     function render_list_item(id,relation){
+        // src="${all_people[id]['Image']}"
         template = `<li class="w3-bar">
-                <img src="${all_people[id]['Image']}" class="w3-bar-item w3-circle " style="width:85px">
+                <img src="../assets/img/user.png" class="w3-bar-item w3-circle " style="width:85px">
                 <div class="w3-bar-item">
-                  <span class="w3-large">${all_people[id]['Name']}</span><br>
-                  <span>${relation}</span>
+                    <div>${relation}</div>
+                  <div class="w3-large">${all_people[id]['Name']}</div>
+                  
                 </div>
               </li>`;
         return template;
     }
+}
+
+let pairs = {
+    'parent':['child','spouse'],
+    'grandparent':['child','child']
 }

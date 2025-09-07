@@ -26,6 +26,7 @@
       style="width:100%;font-size:22px"></a> -->
     <div class="w3-container">
       <h3 class="w3-padding"><b>Kollannur <sup>FT</sup></h3>
+        <input class="w3-input w3-border" id="focus_person" type="text" placeholder="Focus Person" required>
     </div>
     <div class="w3-padding-32 w3-center">
       <div class="w3-bar w3-border">
@@ -63,16 +64,17 @@
   <div class="w3-main w3-white body-container">
     <div style="height: 100%;">
       <div id="loader" style="height: 100%;">
-        <table style="height:100%;width:100%; text-align: center;color: grey;"> 
-          <tr><td id="loader-text">Loading Lineage Map...<br><span class="w3-small"> Using your device's computational power!</span></td></tr>
-        </table>
+        <div class="container w3-center loader-info" style="height: 90%;">
+          <div class="loader-container"><div class="loader"></div></div>
+          <div id="loader-text">Loading Lineage Map...<br><span class="w3-small"> Using your device's computational power!</span></div></tr>
+        </div>
       </div>
       <div id="body-content" style="height: 100%;display: none;">
         <div id="myfamily" style="height: 100%;"></div>
       </div>
     </div>
   </div>
-
+  <script src="../assets/js/autocomplete.js"></script>
   <script src="../assets/js/sidebar.js"></script>
   <script src="../assets/js/utils.js"></script>
   <script src="../assets/js/init_map.js"></script>

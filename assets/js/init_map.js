@@ -14,15 +14,19 @@ function prepare_structures(){
         persons.push({
             id: person.ID,
             label: person.Name,
-            group: person.House
+            group: person.House,
+            font:{
+              background:'white'
+            }
         })
 
         // Spouse to LOVE Node
         if(Object.keys(person).includes("Spouse")){
             if(!(Object.keys(love_map).includes(person.ID))){
+                let marriage = genID(5);
                 relations.push({
                     from: person.ID,
-                    to: person.Spouse+"_LOVE",
+                    to: marriage+"_LOVE",
                     width:5,
                     color:{
                         color:'red'
@@ -30,7 +34,7 @@ function prepare_structures(){
                 })
                 relations.push({
                     from: person.Spouse,
-                    to: person.Spouse+"_LOVE",
+                    to: marriage+"_LOVE",
                     width:5,
                     color:{
                         color:'red'
@@ -44,11 +48,11 @@ function prepare_structures(){
               //     width:5,
               //     hidden:true
               // })
-                love_map[person.Spouse] = person.Spouse+"_LOVE"
-                love_map[person.ID] = person.Spouse+"_LOVE"
+                love_map[person.Spouse] = marriage+"_LOVE"
+                love_map[person.ID] = marriage+"_LOVE"
 
                 persons.push({
-                    id: person.Spouse+"_LOVE",
+                    id: marriage+"_LOVE",
                     label: "❤️",
                     group: person.House,
                     shape: "circle",
@@ -70,11 +74,33 @@ function prepare_structures(){
         }
     }
     
-    // console.log(persons,relations)
+    // console.log(relations,love_map)
 
     return {nodes:persons,edges:relations}
 }
 
+
+function genID(length) {
+  // Ensure the length is a positive number.
+  if (length <= 0 || !Number.isInteger(length)) {
+    console.error("The length must be a positive integer.");
+    return '';
+  }
+
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  let result = '';
+  const charactersLength = characters.length;
+
+  // Loop 'length' times to build the ID string.
+  for (let i = 0; i < length; i++) {
+    // Get a random character from the 'characters' string and append it to the result.
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  }
+
+  return result;
+}
+
+let network;
 function render_map(){
 
     var net = prepare_structures()
@@ -87,6 +113,7 @@ function render_map(){
         layout: {
           improvedLayout: true,
           clusterThreshold: 1000,
+          randomSeed:'0.3826156948434907:1757244543703'
         },
         nodes: {
           widthConstraint: {
@@ -99,11 +126,12 @@ function render_map(){
           },
           labelHighlightBold: false,
         },
+        
         physics: {
           // stabilization: true,
           enabled: true,
           stabilization: {
-            iterations: 800,
+            iterations: 200,
 
           },
         },
@@ -111,7 +139,7 @@ function render_map(){
 
       // var cookie = getCookie("CalculatedNodes")
       var storage = localStorage.getItem("CalculatedNodes")
-      if(storage!=null){        
+      if(storage!=null & false){        
         loader_update(`Loading Cached Nodes...<br><span class="w3-small"> This will be quick!</span>`)
         console.log("Found a previous scroll of knowledge!")
         var data = {
@@ -128,7 +156,9 @@ function render_map(){
       }
 
       var container = document.getElementById("myfamily");
-      var network = new vis.Network(container, data, options);
+      network = new vis.Network(container, data, options);
+
+      console.log("Seed:",network.getSeed())
 
       network.on("click", function (params) {
         //  console.log(params);
