@@ -65,7 +65,7 @@ function discover() {
         for (step of steps){
             switch(step.how){
                 case 'relative':
-                    list_container.innerHTML+=render_list_item(step.id,"Relative A")
+                    list_container.innerHTML+=render_list_item(step.id,"-START-")
                     break;
                 default:
                     list_container.innerHTML+=render_list_item(step.id,step.how)
@@ -84,6 +84,21 @@ function discover() {
                   
                 </div>
               </li>`;
+        return template;
+    }
+
+    function render_list_person(id,relation){
+        // src="${all_people[id]['Image']}"
+        template = `<div class="person-tile">
+            
+        </div>`;
+        return template;
+    }
+    function render_list_relation(id,relation){
+        // src="${all_people[id]['Image']}"
+        template = `<div class="person-tile">
+        
+        </div>`;
         return template;
     }
 }

@@ -5,6 +5,7 @@ function callback_after_load(){
 }
 
 function prepare_structures(){
+  loader_update(`Understanding Relations...<br><span class="w3-small"> Scouring through the Gossip Scrap Book!</span>`)
     var persons = []
     var relations = []
     var love_map = {}
@@ -15,6 +16,7 @@ function prepare_structures(){
             id: person.ID,
             label: person.Name,
             group: person.House,
+            title:"Child",
             font:{
               background:'white'
             }
@@ -76,6 +78,7 @@ function prepare_structures(){
     
     // console.log(relations,love_map)
 
+    autocomplete('focus_node', people_data,focusChild);
     return {nodes:persons,edges:relations}
 }
 
@@ -102,7 +105,7 @@ function genID(length) {
 
 let network;
 function render_map(){
-
+    loader_update(`Creating Nodes...<br><span class="w3-small"> Creating humans on this 2D plane!</span>`)
     var net = prepare_structures()
     var nodes = new vis.DataSet(net.nodes);
     var edges = new vis.DataSet(net.edges);
@@ -112,7 +115,7 @@ function render_map(){
     var options = {
         layout: {
           improvedLayout: true,
-          clusterThreshold: 1000,
+          clusterThreshold: 2000,
           randomSeed:'0.3826156948434907:1757244543703'
         },
         nodes: {
@@ -238,6 +241,15 @@ function render_map(){
       })
 
       
+}
+
+function focusChild(){
+  let element = document.querySelector('#focus_node_ID')
+  if(element.value!=''){
+    network.focus(element.value,{scale:2});
+
+  }
+  release('focus_node')
 }
 
 function prepare_field(prop,value){

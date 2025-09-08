@@ -17,7 +17,7 @@ function dataload(){
             loader_update(`Fetching Nodes...<br><span class="w3-small"> Accessing the global family directory!</span>`)
         }
         callback_after_load()
-        autocomplete('focus_person', people_data);
+        // 
     }
     URL = '../assets/data/family.json';
     // CORS error when accessing GAS API
